@@ -1,0 +1,172 @@
+:root{
+    --color:#F6D8C6;
+    --primary:#B88E2F;
+    --black:#3A3A3A;
+    --color3:#FFF3E3;
+    --greencolor:#2EC1AC;
+    --redcolor:#E97171;
+    --semi-white:#F4F5F7;
+    --gray:#898989a8;
+    --wired:#F9F1E7;
+    --x:#FCF9F4;
+}
+
+body{
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+/* -----------------------------------nav-start----and-----banner-start---------------------------- */
+nav{
+    background-color: white;
+}
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: var(--color);
+}
+nav .active{
+    color: var(--color) !important;
+}
+.icon-cart{
+    position: relative;
+}
+.icon-cart span{
+    background-color: var(--redcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width:20px;
+    height: 20px;
+    border-radius: 25px;
+    position: absolute;
+    left: 25px;
+    top: 0%;
+    padding: 12px;
+    font-size: 12px;   
+}
+
+
+/* footer */
+
+ul li input{
+    width: 250px;
+    border: none;
+    outline: none;
+    border-bottom: black 3px solid;
+}
+ul li .subscribe{
+background-color: transparent;
+border: none;
+outline: none;
+border-bottom: black 3px solid;
+}
+
+
+
+
+/* cart list */
+#listcardparent{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 350px;
+    padding: 2em;
+    transform: translateX(400px);
+    transition: 1s;
+    border-bottom-left-radius: 20px;
+}
+
+#listcard{
+    height: 50vh;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+.item{
+    margin-block: 2em;
+    display:flex;
+    width: 350px;
+}
+
+.myitem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item img{
+    width: 60px;
+    border-radius: 10px;
+}
+
+.btncart{
+    padding: 0.2em;
+}
+
+.btncart *:not(a){
+    background-color: white;
+    border: 1px solid;
+    border-radius:20px ;
+    margin: 0.3em;
+    padding: 0.25em .5em;
+}
+
+.disp{
+    transform: translateX(0) !important;
+    transition: 1s;
+}
+
+.red {
+    color: var(--redcolor) !important;
+}
+
+.edit{
+    background-color: var(--color3);
+}
+
+.features{
+    background-color: var(--color3);
+}
+
+*::selection{
+    background-color: var(--color);
+    color: white;
+}
+.darken{
+    filter: brightness(50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.darken *{
+    pointer-events:none;
+    transition: 0.3s;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    transition: opacity 1s;
+}
+
+#scrollToTopBtn:hover {
+    background-color:var(--primary);
+}
