@@ -132,3 +132,18 @@ ul li .subscribe{
 #scrollToTopBtn:hover {
   background-color:var(--primary);
 }
+.go{
+  position: absolute;
+  transform: translate(100px);
+  transition: 3s;
+}
+.go2{
+  position: absolute;
+  transform: translate(150px);
+  transition: 3s;
+}
+.hello{
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right,red,green blue,yellow);
+}

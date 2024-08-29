@@ -76,11 +76,11 @@ border-bottom: black 3px solid;
     top: 0;
     right: 0;
     background-color: white;
-    width: 350px;
-    padding: 2em;
+    width: 310px;
+    padding: 1em;
     transform: translateX(400px);
     transition: 1s;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 10px;
 }
 
 #listcard{
@@ -96,11 +96,7 @@ border-bottom: black 3px solid;
     width: 350px;
 }
 
-.myitem{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .item img{
     width: 60px;
@@ -115,7 +111,7 @@ border-bottom: black 3px solid;
     background-color: white;
     border: 1px solid;
     border-radius:20px ;
-    margin: 0.3em;
+    margin-right: 0.3em;
     padding: 0.25em .5em;
 }
 

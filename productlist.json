@@ -4,6 +4,10 @@
     "liked": false,
     "des":"minimalist flower por",
     "image":"images/Images.png",
+    "image1":"images/sm1.png",
+    "image2":"images/sm2.png",
+    "image3":"images/sm3.png",
+    "image4":"images/sm4.png",
     "sale":30
     },
 
@@ -13,6 +17,10 @@
     "liked": false,
     "des":"minimalist flower por",
     "image":"images/image2.png",
+    "image1":"images/sm1.png",
+    "image2":"images/sm2.png",
+    "image3":"images/sm3.png",
+    "image4":"images/sm4.png",
     "not":"x"
    },
    {"id":3,
@@ -101,7 +109,11 @@
     "price":400,
     "liked": false,
     "des":"minimalist flower por",
-    "image":"images/image5.png"
+    "image":"images/image5.png",
+    "image1":"images/Image5.png",
+    "image2":"images/Image5.png",
+    "image3":"images/Image5.png",
+    "image4":"images/Image5.png"
    },
    {"id":14,
     "name":"potty",
@@ -319,6 +331,10 @@
  "price":300,
  "liked": false,
  "des":"minimalist flower por",
+ "image1":"images/sm1.png",
+ "image2":"images/sm2.png",
+ "image3":"images/sm3.png",
+ "image4":"images/sm4.png",
  "image":"images/brown.png",
  "new":"New"
 

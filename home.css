@@ -293,3 +293,12 @@ nav .active{
     }
 }
 
+.carimg{
+    height: 500px;
+}
+
+@media(max-width:600px){
+    .carimg{
+        height: 200px;
+    }
+}

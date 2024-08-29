@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
           <a class="ms-4 navbar-brand fw-bold fs-4"  href="furniro.html">
             <img src="images/Meubel House_Logos-05.svg"  alt=""  class="d-inline-block align-text-top"> Furniro
@@ -50,66 +50,44 @@
           </div>
         </div>
       </nav>
-    <div class="container mt-5" style="background-color: var(--color3);">
+    <div class="container mt-5 d-flex">
         <div class="row">
-            <div class="col-md-6">
+          <div class="col-md-1">
+            <div class="d-grid my-auto mt-5 align-items-center">
+              <div class="one text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+              <div class="two text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+              <div class="three text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+              <div class="four text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+            </div>
+          </div>
+            <div class="col-md-5">
                 <img id="product-image" class="img-fluid" src="" alt="Product Image">
             </div>
             <div class="col-md-6">
                 <h1 id="product-name"></h1>
                 <p id="product-description"></p>
+                <div class="d-flex">
+                  <div class="dont plus" style="cursor: pointer;" >+</div>
+                  <div class="q">0</div>
+                  <div class="dont minus" style="cursor: pointer;" >-</div>  
+                </div>
                 <h3 id="product-price"></h3>
                 <button class="btn text-black fw-bold fs-1" id="add-to-cart">Add to Cart</button>
+                <svg class="share-icon twitter" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m215.3 337.7c.3 4.7.3 9.6.3 14.4c0 146.8-111.8 315.9-316.1 315.9c-63 0-121.4-18.3-170.6-49.8c9 1 17.6 1.4 26.8 1.4c52 0 99.8-17.6 137.9-47.4c-48.8-1-89.8-33-103.8-77c17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35c25.1-4.7 49.1-14.1 70.5-26.7c-8.3 25.7-25.7 47.4-48.8 61.1c22.4-2.4 44-8.6 64-17.3c-15.1 22.2-34 41.9-55.7 57.6"/></svg>
+                <svg class="share-icon whatsapp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-LinkedinBoxFill"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634 3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0 2.063 2.063 0 0 1 4.125 0z"/></svg>
+                <svg class="share-icon facebook" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-FacebookFill"><g clip-path="url(#clip0_65_70)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067z"/></g><defs><clipPath id="clip0_65_70"><rect width="24" height="24"/></clipPath></defs></svg>
+                <!-- <svg class="share-icon linkedin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-WhatsappFill"><g clip-path="url(#clip0_615_275)"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.415 14.382c-.298-.149-1.759-.867-2.031-.967-.272-.099-.47-.148-.669.15-.198.296-.767.966-.94 1.164-.174.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.241-.579-.486-.5-.668-.51-.174-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.57-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.422 7.403h-.004a9.87 9.87 0 0 1-5.032-1.378l-.36-.214-3.742.982.999-3.648-.235-.374a9.861 9.861 0 0 1-1.511-5.26c.002-5.45 4.436-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.892 6.993c-.002 5.45-4.436 9.885-9.884 9.885zm8.412-18.297A11.815 11.815 0 0 0 11.992 0C5.438 0 .102 5.335.1 11.892c-.001 2.096.546 4.142 1.587 5.945L0 24l6.304-1.654a11.881 11.881 0 0 0 5.684 1.448h.005c6.554 0 11.89-5.335 11.892-11.893a11.821 11.821 0 0 0-3.48-8.413"/></g><defs><clipPath id="clip0_615_275"><rect width="24" height="24"/></clipPath></defs></svg> -->
             </div>
         </div>
     </div>
 
     <div class="similar p-5 mx-auto">
     <h2 class="text-center fw-bold my-5">similar products</h2>
+    <div class="products-show">
       <div class="row">
-
       </div>
     </div>
-    <div class="features p-5">
-      <div class="row">
-        <div class="col-md-3 col-6">
-          <div class="feature d-flex mb-md-0 mb-5">
-            <img src="images/trophy 1.svg" class="p-2" alt="">
-          <div class="p-2">
-          <h6 class="fw-bold">High Quality</h6>
-            <div class="fs-7 text-black-50">crafted from top matrials</div>
-          </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="feature d-flex mb-md-0 mb-5">
-            <img src="images/true.svg" class="p-2" alt="">
-          <div class="p-2">
-          <h6 class="fw-bold">Warranty Protection</h6>
-            <div class="fs-7 text-black-50">over 2 years</div>
-          </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="feature d-flex">
-            <img src="images/handcarrybox.svg" class="p-2" alt="">
-          <div class="p-2">
-          <h6 class="fw-bold">Free Shipping</h6> 
-            <div class="fs-7 text-black-50">order over 150 $</div>
-          </div>
-          </div>
-        </div>
-           <div class="col-md-3 col-6">
-          <div class="feature d-flex">
-            <img src="images/girl.svg" class="p-2" alt="">
-          <div class="p-2">
-          <h6 class="fw-bold">24 / 7 Support</h6>
-            <div class="fs-7 text-black-50">Dedicated Support</div>
-          </div>
-          </div>
-        </div>
-      </div>
-     </div>
+  </div>
     <div class="footer p-5">
       <div class="row">
         <div class="col-lg-4 col-8">
@@ -148,20 +126,29 @@
     </div>
     <hr style="width: 95%; margin: 20px auto;">
     <p class="m-2 p-3" ><span id="copyright"></span> furniro. all rights reverved</p>
-    <div class="total subtotal d-none"></div>
 
-    <section id="listcardparent">
-      <h2>Shopping Cart</h2>
+    <section id="listcardparent" class="dont" style="z-index: 2000;">
+      <div class="d-flex justify-content-between align-items-center p-2 pb-0">
+      <h4 class="d-inline dont">Shopping Cart</h4>
       <img src="images/cart.png" class="closing" style="cursor: pointer;" alt="">
+      </div>
       <hr>
-      <section id="listcard"></section>
-      <hr>
-     <div class="btncart">
-      <button>cart</button>
-      <button onclick="checkout()">checkout</button>
-      <button>comperation</button>
-     </div>
-    </section>
+      <section id="listcard" class="dont mb-3"></section>
+      <span class="subtotal">Subtotal:</span>
+      <hr style="width: 110%;" class="me-5">
+      <div class="dont btncart d-flex">
+      <button class="dont carting">
+        <a style="border: none;" href="cart.html">
+        cart
+        </a>
+      </button>
+      <button onclick="carting()" class="dont checkout">checkout</button>
+      <button class="dont">comperation</button>
+      </div>
+      </section>
+      <div class="total d-none"></div>
+      <button id="scrollToTopBtn" title="Go to top">↑</button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="module" src="detail.js"></script>
     <script src="x.js"></script>

@@ -1,7 +1,14 @@
-document.querySelector(".icon-cart").onclick = () => {
-  document.querySelector("#listcardparent").classList.toggle("disp")
-  document.querySelector(".page").classList.toggle("darken")
-};
+document.querySelectorAll(".icon-cart").forEach(e => {
+  e.onclick = () => {
+    document.querySelectorAll("#listcardparent").forEach(listCard => {
+      listCard.classList.toggle("disp");
+    });
+    document.querySelectorAll(".page").forEach(page => {
+      page.classList.toggle("darken");
+    });
+  };
+});
+
 document.querySelector(".closing").onclick = () => {
   document.querySelector("#listcardparent").classList.toggle("disp")
   document.querySelector(".page").classList.toggle("darken")
@@ -79,7 +86,7 @@ let refreshcart = () => {
     newitem.classList.add("item");
     newitem.classList.add("dont");    
     newitem.innerHTML = `
- <div class="myitem dont">
+ <div class="myitem d-flex justify-content-between align-items-center px-2 dont">
     <div class="image dont">
         <a class="dont" href="/detail.html?id=${info.id}">
           <img class="dont" src="${info.image || ''}"alt="">
@@ -158,6 +165,19 @@ document.addEventListener("click", (e) => {
   if (buttonclick.classList.contains("addbutton") || buttonclick.classList.contains("plus") || buttonclick.classList.contains("addcart")) {
     quantity = quantity ? quantity + 1 : 1; 
     addtocart(idproduct, quantity, position, price);
+    setTimeout(() => {
+      setHeight("asgaardsofa.png", "316px", "63.5833px");
+      setHeight("brown.png", "316px", "63.5833px"); 
+    if (location.pathname == "/detail.html") {
+      setHeight("asgaardsofa.png", "", "63.5833px");
+      setHeight("brown.png", "", "63.5833px"); 
+    }
+    if (location.pathname == "/cart.html") {
+      setHeight("asgaardsofa.png", "", "73.93333px");
+      setHeight("brown.png", "", "73.93333px"); 
+    }
+      }, 2000);
+    
   } else if (buttonclick.classList.contains("minus")) {
     quantity = quantity ? quantity - 1 : 0; 
     addtocart(idproduct, quantity, position, price);
@@ -207,4 +227,33 @@ if (location.pathname != "/checkout.html") {
     })
   })
 }
+
+const setHeight = (imageName, height1, height2) => {
+  // Select the image with the specified name
+  const targetImage = document.querySelector(`img[src$='${imageName}']`);
+  if (targetImage) {
+      targetImage.style.height = height1;
+     
+  }
+
+  // Select the image with the specified name inside the ".dont" class
+  const targetImage2 = document.querySelector(`.dont img[src$='${imageName}']`);
+  if (targetImage2) {
+      targetImage2.style.height = height2;
+  }
+};
+
+
+setTimeout(() => {
+  setHeight("asgaardsofa.png", "316px", "63.5833px");
+  setHeight("brown.png", "316px", "63.5833px"); 
+if (location.pathname == "/detail.html") {
+  setHeight("asgaardsofa.png", "", "63.5833px");
+  setHeight("brown.png", "", "63.5833px"); 
+}
+if (location.pathname == "/cart.html") {
+  setHeight("asgaardsofa.png", "", "73.93333px");
+  setHeight("brown.png", "", "73.93333px"); 
+}
+  }, 2000);
 

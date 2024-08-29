@@ -17,17 +17,18 @@ document.querySelector(".mybutton").onclick = () => {
     });
 
     obj["myz"] = JSON.parse(localStorage.getItem("finalreset"));
-    obj["myx"] = []
+    localStorage.setItem("purchases",JSON.stringify(JSON.parse(localStorage.getItem("cart"))))
+    let purchases = localStorage.getItem("purchases")
+    obj["purchases"] = purchases
     obj["time"] = currentDate.toString()
     obj["pay"] = document.querySelector(".paymentmethod").innerHTML 
     customers.push(obj);
     localStorage.setItem("customers",JSON.stringify(customers))
     console.log(customers);    
-    document.querySelectorAll("#listcard .fs-7").forEach((e,index)=>{
-        obj.myx.push(`${e.innerText}`)
+    document.querySelectorAll("#listcard .fs-7").forEach((e)=>{
         console.log(e.innerText);
         
-        console.log(obj.myx[index]);
+  
     })
 
     document.querySelector("#listcard").innerHTML=null
