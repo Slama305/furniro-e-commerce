@@ -166,3 +166,28 @@ border-bottom: black 3px solid;
 #scrollToTopBtn:hover {
     background-color:var(--primary);
 }
+
+
+.go{
+    position: absolute;
+    transform: translate(100px);
+    transition: 3s;
+  }
+  .go2{
+    position: absolute;
+    transform: translate(150px);
+    transition: 3s;
+  }
+  .hello{
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right,red,green blue,yellow);
+  }
+  .contacting{
+    background-image: url(images/Rectangle\ 1x.png);
+    background-size:100% 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-clip:var(--redcolor);
+    filter:drop-shadow();
+    }

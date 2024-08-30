@@ -1,4 +1,4 @@
-import { createproduct,like,copyright,likeitem, subscriber } from "./products.js"
+import { createproduct,likeitem} from "./products.js"
 
 
        
@@ -11,7 +11,5 @@ fetch('productlist.json')
     .catch(error => {
         console.error('Error fetching the product list:', error);
     });
-like()
-copyright()
-subscriber()
+
 likeitem()

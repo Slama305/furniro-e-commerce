@@ -1,8 +1,4 @@
-import { subscriber, copyright, like, likeitem } from "/products.js";
-like();
-subscriber();
-copyright();
-
+import {likeitem} from "/products.js";
 document.addEventListener("DOMContentLoaded", () => {
     let productId = new URLSearchParams(window.location.search).get('id');
     let products = JSON.parse(localStorage.getItem("myarr"));

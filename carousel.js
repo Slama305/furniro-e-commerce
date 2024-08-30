@@ -1,4 +1,4 @@
-import { createproduct, like, copyright, likeitem, subscriber } from "./products.js";
+import { createproduct, likeitem } from "./products.js";
 
 let arr = [];
 
@@ -156,10 +156,6 @@ document.querySelector(".myownfilter").addEventListener("click", () => {
 
 myfilteralpahapetically();
 myfilter();
-
-like();
-copyright();
-subscriber();
 likeitem();
 
     const setHeight = (imageName, height1, height2) => {

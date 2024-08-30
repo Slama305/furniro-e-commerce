@@ -1,7 +1,3 @@
-import {copyright,like,subscriber} from '/products.js'
-like()
-copyright()
-subscriber()
 let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let strregex = /\D/
     // document.querySelectorAll(".contact").forEach((e)=>{

@@ -142,7 +142,7 @@ ul li .subscribe{
     flex-direction: row-reverse;
     justify-content: center;
     cursor: pointer;
-    margin-top: -20px;
+    margin-top: -10px;
     margin-left: -16px;
 }
 .stars input {
@@ -171,4 +171,10 @@ ul li .subscribe{
 .size.active{
     color: white;
     background-color: var(--primary);
+}
+
+
+#product-image{
+    width: 410px;
+    height: 460px;
 }

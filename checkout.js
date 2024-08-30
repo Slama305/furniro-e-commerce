@@ -1,10 +1,4 @@
-import {subscriber,copyright,like} from '/products.js'
-subscriber()
-copyright()
-like()
-
-let customers = []
-customers =JSON.parse( localStorage.getItem("customers"))
+let customers = JSON.parse( localStorage.getItem("customers")) || []
 const currentDate = new Date();
 
 document.querySelector(".mybutton").onclick = () => {
@@ -50,18 +44,4 @@ document.querySelectorAll(".mypayment").forEach((e)=>{
     ee.target.previousElementSibling.innerHTML=`<svg style="margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10s10-4.47 10-10S17.53 2 12 2"/></svg>`
     console.log(ee.target.previousElementSibling);
     })
-})
-
-
-document.querySelector(".myhome").addEventListener("click",(e)=>{
-    e.preventDefault()  
-    document.querySelector(".going").classList.add("hello")      
-        e.target.classList.toggle("go")
-        document.querySelector(".nxt").classList.add("go2")
-        
-    setTimeout(() => {
-    location.assign("furniro.html")
-    }, 3000);
-    console.log(e.target);
-    
 })
