@@ -253,9 +253,9 @@ ul li .subscribe{
 
 .mydivlist{
     position: absolute;
-    top: -70%;
+    top: -390%;
     z-index: 1000;
-    right: 70%;
+    right: 30%;
     position: absolute;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -263,7 +263,17 @@ ul li .subscribe{
     padding: 10px;
     
 }
-
+.myullet{
+    position: absolute;
+    top: -70%;
+    z-index: 1000;
+    right: 10%;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+}
 .filter,.sort{
     cursor: pointer;
     padding: 10px;

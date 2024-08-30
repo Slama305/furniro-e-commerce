@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (product) {
             document.getElementById("product-image").src = product.image;
-            document.getElementById("product-image").style.width="410px"
+            document.querySelector(".key").innerHTML=product.key
             document.getElementById("product-name").textContent = product.name;
-            document.getElementById("product-description").textContent = product.description;
-            document.getElementById("product-price").textContent = `$${product.price}`;
+            document.getElementById("product-description").textContent = product.describtion;
+            document.getElementById("product-price").textContent = `Rs ${product.price},000.00`;
             document.querySelector(".plus").setAttribute("data-id", productId);
             document.querySelector(".minus").setAttribute("data-id", productId);
             document.querySelector(".one img").src=product.image1
@@ -159,4 +159,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
+    const stars = document.querySelectorAll('.stars input');
+    const ratingValue = document.getElementById('rating-value');
+    
+    // Load the saved rating from localStorage if available
+    const savedRating = localStorage.getItem("rate");
+    if (savedRating) {
+        ratingValue.textContent = savedRating;
+        // Check the star corresponding to the saved rating
+        stars.forEach(star => {
+            if (star.value === savedRating) {
+                star.checked = true;
+            }
+        });
+    }
+    
+    // Add event listener to each star input
+    stars.forEach(star => {
+        star.addEventListener('change', function() {
+            const selectedRating = this.value;
+            ratingValue.textContent = selectedRating;
+            localStorage.setItem("rate", selectedRating);
+        });
+    });
     

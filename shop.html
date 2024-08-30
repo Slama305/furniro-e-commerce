@@ -68,11 +68,11 @@
           <div class="me-auto ps-auto pe-auto">
             <img  class="mylist myfilter img-fluid p-2" src="images/filter.svg" alt="">
               <div class="mydivlist myfilter d-none">
-                <div  class="filter myfilter fw-bold">
+                <div  class="filter myfilter">
                 Filter
-                <svg class="myfilter" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg>
+                <svg class="myfilter rot" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg>
               </div>
-                <ul class="myul d-none myfilter">
+                <ul class="myul myfilter">
                   <li class="myownfilter myfilter" >refresh</li>
                   <li class="myfilter" >100</li>
                   <li class="myfilter" >200</li>
@@ -82,15 +82,6 @@
                   <li class="myfilter" >600</li>
                   <li class="myfilter" >700</li>
                   <li class="myfilter" >800</li>
-                </ul>
-                <div class="sort myfilter fw-bold">
-                  Sort
-                <svg class="myfilter" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg>
-                </div>
-                <ul class="myullet d-none myfilter">
-                  <li class="myfilter" >a-z</li>
-                  <li class="myfilter" >z-a</li>
-                  <li class="myfilter" >default</li>
                 </ul>
               </div>
             <span class="p-2"> Filter</span>
@@ -103,13 +94,15 @@
           <div class="m-2 me-auto ps-auto pe-auto">
             <span class="m-3 show">Show<span style="background-color: white; padding: 5px;">48</span></span>
             <span class="m-3">
-              <label for="cars">Short By</label>
-              <select name="cars" id="cars" style="background-color: white; border: none;">
-                <option value="Default">Default</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
+              <div class="sort d-inline myfilter">
+                Sort by
+              <svg class="myfilter rot" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg>
+              </div>
+              <ul class="myullet d-none myfilter">
+                <li class="myfilter" >a-z</li>
+                <li class="myfilter" >z-a</li>
+                <li class="myfilter" >default</li>
+              </ul>
             </span>
             </div>
         </div>

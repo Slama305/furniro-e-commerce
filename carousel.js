@@ -21,23 +21,16 @@ fetch('productlist.json')
         console.error('Error fetching the product list:', error);
     });
 
-let appear = () => {
     document.querySelector(".mylist").addEventListener("click", () => {
         document.querySelector(".mydivlist").classList.toggle("d-none");
     });
 
+
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("sort") || e.target.parentElement.classList.contains("sort")) {
             document.querySelector(".myullet").classList.toggle("d-none");
-            document.querySelector(".sort svg").classList.toggle("rot");
-        }
-
-        if (e.target.classList.contains("filter") || e.target.parentElement.classList.contains("filter")) {
-            document.querySelector(".myul").classList.toggle("d-none");
-            document.querySelector(".filter svg").classList.toggle("rot");
         }
     });
-};
 
 document.querySelectorAll("*").forEach((e) => {
     e.addEventListener("click", (ee) => {    
@@ -46,7 +39,13 @@ document.querySelectorAll("*").forEach((e) => {
         }
     });
 });
-
+document.querySelectorAll("*").forEach((e) => {
+    e.addEventListener("click", (ee) => {    
+        if (!ee.target.classList.contains("myfilter")) {
+            document.querySelector(".myullet").classList.add("d-none");
+        }
+    });
+});
 let resetProducts = () => {
     let arr = JSON.parse(localStorage.getItem("hello"));
     let arr2 = JSON.parse(localStorage.getItem("hello2"));
@@ -157,7 +156,7 @@ document.querySelector(".myownfilter").addEventListener("click", () => {
 
 myfilteralpahapetically();
 myfilter();
-appear();
+
 like();
 copyright();
 subscriber();
