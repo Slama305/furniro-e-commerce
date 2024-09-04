@@ -168,13 +168,17 @@ document.addEventListener("click", (e) => {
     setTimeout(() => {
       setHeight("asgaardsofa.png", "316px", "63.5833px");
       setHeight("brown.png", "316px", "63.5833px"); 
+      setHeight("outdoorsofa.png", "316px", "63.5833px");
+      
     if (location.pathname == "/detail.html") {
       setHeight("asgaardsofa.png", "", "63.5833px");
       setHeight("brown.png", "", "63.5833px"); 
+      setHeight("outdoorsofa.png", "", "63.5833px"); 
     }
     if (location.pathname == "/cart.html") {
       setHeight("asgaardsofa.png", "", "73.93333px");
       setHeight("brown.png", "", "73.93333px"); 
+      setHeight("outdoorsofa.png", "", "73.93333px"); 
     }
       }, 2000);
     
@@ -244,16 +248,21 @@ const setHeight = (imageName, height1, height2) => {
 };
 
 
-setTimeout(() => {
-  setHeight("asgaardsofa.png", "316px", "63.5833px");
-  setHeight("brown.png", "316px", "63.5833px"); 
-if (location.pathname == "/detail.html") {
-  setHeight("asgaardsofa.png", "", "63.5833px");
-  setHeight("brown.png", "", "63.5833px"); 
+if (location.pathname !="/compare.html") {
+  setTimeout(() => {
+    setHeight("asgaardsofa.png", "316px", "63.5833px");
+    setHeight("brown.png", "316px", "63.5833px"); 
+    setHeight("outdoorsofa.png", "316px", "63.5833px"); 
+  if (location.pathname == "/detail.html") {
+    setHeight("asgaardsofa.png", "", "63.5833px");
+    setHeight("brown.png", "", "63.5833px"); 
+    setHeight("outdoorsofa.png", "", "63.5833px"); 
+  }
+  if (location.pathname == "/cart.html") {
+    setHeight("asgaardsofa.png", "", "73.93333px");
+    setHeight("brown.png", "", "73.93333px"); 
+    setHeight("outdoorsofa.png", "", "73.93333px"); 
+  }
+    }, 2000);
 }
-if (location.pathname == "/cart.html") {
-  setHeight("asgaardsofa.png", "", "73.93333px");
-  setHeight("brown.png", "", "73.93333px"); 
-}
-  }, 2000);
 

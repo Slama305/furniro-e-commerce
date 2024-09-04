@@ -1,12 +1,18 @@
 import {likeitem} from "/products.js";
+const stars = document.querySelectorAll('.stars input');
+const ratingValue = document.getElementById('rating-value');
 document.addEventListener("DOMContentLoaded", () => {
     let productId = new URLSearchParams(window.location.search).get('id');
     let products = JSON.parse(localStorage.getItem("myarr"));
-    
+    setTimeout(() => {
+        console.log(products);
+        
+    }, 3000);
     if (productId && products) {
         let product = products.find(p => p.id == productId);
 
         if (product) {
+            document.getElementById("light").innerHTML = product.name;
             document.getElementById("product-image").src = product.image;
             document.querySelector(".key").innerHTML=product.key
             document.getElementById("product-name").textContent = product.name;
@@ -18,6 +24,34 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".two img").src=product.image2
             document.querySelector(".three img").src=product.image3
             document.querySelector(".four img").src=product.image4
+            document.querySelector(".comp").style.cursor=`pointer`
+            document.querySelector(".comp").onclick = () =>{
+            location.assign(`compare.html?id=${productId}`)
+            }
+                // Load the saved rating from localStorage if available
+            const savedRating = localStorage.getItem(`rate${product.id}`);
+            if (savedRating) {
+                ratingValue.textContent = savedRating;
+                product.rate = savedRating
+                console.log(product.rate);
+                
+                // Check the star corresponding to the saved rating
+                stars.forEach(star => {
+                    if (star.value === savedRating) {
+                        star.checked = true;
+                    }
+                });
+            }
+    
+            // Add event listener to each star input
+            stars.forEach((star,index) => {
+                star.addEventListener('change', function() {
+                    const selectedRating = this.value;
+                    ratingValue.textContent = selectedRating;
+                    localStorage.setItem(`rate${product.id}`, selectedRating);
+                });
+            });
+    
             document.getElementById("add-to-cart").onclick = () => {
                 let cart = JSON.parse(localStorage.getItem("cart")) || [];
                 let existingProduct = cart.find(p => p.productid == product.id);
@@ -43,11 +77,20 @@ document.addEventListener("DOMContentLoaded", () => {
     products.length = 8;
     products.filter((e) => e.id != productId).forEach((product) => {
         let newproduct = document.createElement("div");
+                let sale = `<div class="sale">-${product.sale}%</div>`
+                if (product.new) {
+                    sale = `<div class="sale new">${product.new}</div>`
+                }else if(!product.new && !product.sale){
+                    sale = `<div class="sale"></div>`
+
+                }
+
         newproduct.classList.add("col-md-6", "col-lg-4", "col-hey");
         newproduct.innerHTML = `<div class="cont">
                                     <div class="innercontent">
                                         <a href="detail.html?id=${product.id}">
                                             <img width="100%" class="img-fluid" src=${product.image} alt="">
+                                                                   ${sale} 
                                         </a>
                                     </div>
                                     <div class="des">
@@ -155,27 +198,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
-    const stars = document.querySelectorAll('.stars input');
-    const ratingValue = document.getElementById('rating-value');
-    
-    // Load the saved rating from localStorage if available
-    const savedRating = localStorage.getItem("rate");
-    if (savedRating) {
-        ratingValue.textContent = savedRating;
-        // Check the star corresponding to the saved rating
-        stars.forEach(star => {
-            if (star.value === savedRating) {
-                star.checked = true;
-            }
-        });
-    }
-    
-    // Add event listener to each star input
-    stars.forEach(star => {
-        star.addEventListener('change', function() {
-            const selectedRating = this.value;
-            ratingValue.textContent = selectedRating;
-            localStorage.setItem("rate", selectedRating);
-        });
-    });
+
     

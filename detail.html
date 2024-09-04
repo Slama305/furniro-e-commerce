@@ -53,6 +53,7 @@
       <div class="edit p-3">
                 <a href="furniro.html" class="myhome"><p class="d-inline ps-5 p-2">Home</p></a><svg class="nxt" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg>
                 <a href="shop.html" class="going"><p class="d-inline p-2">Shop</p></a><svg class="nxt" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg>
+                <div id="light" style="border-left: 2px solid var(--gray);" class="d-inline ps-4 p-2 ms-4"></div>
     </div>
     <div class="container mt-5">
         <div class="ms-5 row">
@@ -108,7 +109,7 @@
                   <div class="dont minus" style="cursor: pointer;" >-</div>  
                 </div>
                 <button class="me-2 text-black p-3  w-25 bg-white" style="border-radius: 10px; border: 1px solid;" id="add-to-cart">Add to Cart</button>
-                <button class="text-black p-3  w-25 bg-white" style="border-radius: 10px; border: 1px solid;" id="add-to-cart">+ compare</button>
+                <button class="text-black p-3 comp w-25 bg-white" style="border-radius: 10px; border: 1px solid;" id="add-to-cart">+ compare</button>
                 </div>
                 <div class="m-5 ms-0 mt-0">
                 <hr style="height: 0.5px;">
@@ -142,6 +143,11 @@
         </div>
     </div>
     <hr>
+    <section>
+      Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
+      <br>
+      Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
+    </section>
     <div class="similar p-5 mx-auto">
     <h2 class="text-center fw-bold my-5">Related products</h2>
     <div class="products-show">
@@ -209,10 +215,43 @@
       </section>
       <div class="total d-none"></div>
       <button id="scrollToTopBtn" title="Go to top">↑</button>
-
+      <div class="visit"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="module" src="detail.js"></script>
     <script src="main.js"></script>
     <script src="x.js"></script>
+    <script>
+          document.addEventListener("DOMContentLoaded", () => {
+        // Extract the ID from the URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const objectId = urlParams.get('id');
+
+        if (objectId) {
+            // Retrieve the current visit count from localStorage
+            let visitCount = localStorage.getItem(`visitCount_${objectId}`);
+
+            // Initialize visit count if not already set
+            if (visitCount === null) {
+                visitCount = 0;
+            } else {
+                visitCount = parseInt(visitCount, 10);
+            }
+
+            // Increment the visit count
+            visitCount += 1;
+
+            // Update localStorage with the new visit count
+            localStorage.setItem(`visitCount_${objectId}`, visitCount);
+
+            // Display the visit count on the page
+            const visitCountElement = document.querySelector('.visit');
+            if (visitCountElement) {
+                visitCountElement.textContent = `This page has been visited ${visitCount} times for object ID ${objectId}.`;
+            }
+        } else {
+            console.log('No object ID found in the URL');
+        }
+    });
+    </script>
 </body>
 </html>

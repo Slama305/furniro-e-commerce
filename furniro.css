@@ -187,6 +187,7 @@ border-bottom: black 3px solid;
     background-image: url(images/Rectangle\ 1x.png);
     background-size:100% 100%;
     width: 100%;
+    height: 228.05px;
     background-repeat: no-repeat;
     background-clip:var(--redcolor);
     filter:drop-shadow();

@@ -4,6 +4,18 @@
     height: 780px;
     background-repeat: no-repeat;
 }
+
+@media(max-width:768px){
+    .banner{
+    overflow-y: scroll;
+    }
+    .navbar ul{
+    margin-left: 2em !important;
+    }
+    .mask{
+        margin-bottom: 15em !important;
+    }
+}
 nav .active{
     color: var(--color) !important;
 }

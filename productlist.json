@@ -401,11 +401,11 @@
 },
 {"id":43,
 "key":"hello",
- "name":"potty",
+ "name":"Out door sofa",
  "price":600,
  "liked": false,
  "des":"minimalist flower por",
- "image":"images/Images2.png",
+ "image":"images/outdoorsofa.png",
  "sale" : 50
 },
 {"id":44,
