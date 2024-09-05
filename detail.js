@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem(`rate${product.id}`, selectedRating);
                 });
             });
+            
     
             document.getElementById("add-to-cart").onclick = () => {
                 let cart = JSON.parse(localStorage.getItem("cart")) || [];
